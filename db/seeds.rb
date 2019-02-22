@@ -9,8 +9,8 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 Category.destroy_all
 
-Category::WHITELISTED.each do |name|
-	Category.create(name: name, marker_url: nil)
+Category::WHITELISTED.each do |category|
+	Category.create(category)
 end
 	
 category_ids = Category.ids
